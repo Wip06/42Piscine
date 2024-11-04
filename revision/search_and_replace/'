@@ -1,0 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   search_and_replace.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ycandela <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/05 10:32:29 by ycandela          #+#    #+#             */
+/*   Updated: 2024/09/05 10:50:08 by ycandela         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	s_and_r(char *str, char s, char r)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == s)
+			ft_putchar(r);
+		else
+			write(1, &str[i], 1);
+		i++;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	int	i;
+	int	j;
+
+	j = 1;
+	if (argc == 4)
+	{
+		if (argv[j][i] != '\0')
+		{
+			i = 0;
+			s_and_r(&argv[1][i], argv[2][0], argv[3][0]);
+			i++;
+		}
+	}
+	ft_putchar(\n);
+	return (0);
+}
